@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="draft-bar" class="draft-bar" hidden>
+    <span id="draft-text"></span>
+    <button id="draft-reset" type="button"></button>
+  </div>
+
   <header class="hero">
     <div class="lang" role="group" aria-label="Idioma / Language / Langue">
       <button data-lang="es" aria-pressed="true">ES</button>
@@ -35,9 +40,25 @@
   <footer class="footer">
     <p id="allergen-note"></p>
     <a id="whatsapp" class="whatsapp" target="_blank" rel="noopener"></a>
-    <p class="credit">Demo · <a href="https://github.com/elalamiz605-tech/menu-qr-cafe">GitHub</a></p>
+    <p class="credit">Demo · <a href="servicio.html">¿Quieres este menú para tu negocio?</a> · <a href="admin.html">Panel</a></p>
   </footer>
 
+  <button id="ask-open" class="ask-open" type="button"></button>
+
+  <section id="ask-panel" class="ask-panel" hidden aria-labelledby="ask-title">
+    <header class="ask-head">
+      <strong id="ask-title"></strong>
+      <button id="ask-close" class="ask-close" type="button">✕</button>
+    </header>
+    <div id="ask-log" class="ask-log" aria-live="polite"></div>
+    <form id="ask-form" class="ask-form">
+      <input id="ask-input" type="text" autocomplete="off" maxlength="200">
+      <button id="ask-send" type="submit"></button>
+    </form>
+  </section>
+
+  <script src="menu-data.js"></script>
+  <script src="assistant.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

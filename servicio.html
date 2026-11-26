@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carta digital con código QR para bares, cafeterías y restaurantes de Salamanca. En 3 idiomas, con los 14 alérgenos y un asistente que recomienda platos.">
+  <meta name="theme-color" content="#3b2a20">
+  <title>Menú QR Salamanca · Carta digital para bares y cafeterías</title>
+  <style>
+    :root {
+      --bg: #faf6f1; --card: #fff; --ink: #2b1f18; --muted: #75655a;
+      --brand: #3b2a20; --accent: #c8793a; --accent-soft: #fff3e6; --line: #ece3da; --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+    .btn { display: inline-block; text-decoration: none; font-weight: 600; border-radius: 999px; padding: .85rem 1.4rem; border: 1px solid transparent; }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.whats { background: #25d366; color: #fff; }
+    .btn.ghost { border-color: var(--line); background: #fff; }
+
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(250,246,241,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 800; text-decoration: none; letter-spacing: -.3px; }
+    .logo span { color: var(--accent); }
+    nav .links { display: flex; gap: 1.4rem; align-items: center; font-size: .95rem; }
+    nav .links a:not(.btn) { text-decoration: none; color: var(--muted); }
+    nav .btn { padding: .55rem 1rem; }
+
+    .hero { padding: 4rem 0 3rem; }
+    .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; }
+    .kicker { display: inline-block; background: var(--accent-soft); color: #a65a1c; border-radius: 999px; padding: .3rem .8rem; font-size: .85rem; font-weight: 600; }
+    h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.08; letter-spacing: -1px; margin: 1rem 0; }
+    h1 em { font-style: normal; color: var(--accent); }
+    .lead { font-size: 1.15rem; color: var(--muted); max-width: 34rem; }
+    .cta-row { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.6rem; }
+    .proof { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); }
+
+    .phone { justify-self: center; width: 300px; height: 610px; border-radius: 44px; background: #1c1410; padding: 12px; box-shadow: 0 30px 60px rgba(59,42,32,.25); position: relative; }
+    .phone iframe { width: 100%; height: 100%; border: 0; border-radius: 34px; background: #fff; }
+    .phone-note { text-align: center; font-size: .85rem; color: var(--muted); margin-top: .8rem; }
+
+    section { padding: 4rem 0; }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: -.5px; margin: 0 0 .6rem; }
+    .sub { color: var(--muted); max-width: 40rem; margin: 0 0 2rem; }
+
+    .problem { background: var(--brand); color: #fff; }
+    .problem .sub { color: rgba(255,255,255,.75); }
+    .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .vs div { border-radius: var(--radius); padding: 1.4rem; }
+    .vs .before { background: rgba(255,255,255,.07); }
+    .vs .after { background: #fff; color: var(--ink); }
+    .vs h3 { margin: 0 0 .7rem; }
+    .vs ul { margin: 0; padding-left: 1.1rem; line-height: 1.9; }
+
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .feature { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; }
+    .feature .ico { font-size: 1.8rem; }
+    .feature h3 { margin: .5rem 0 .3rem; font-size: 1.1rem; }
+    .feature p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; counter-reset: s; }
+    .step { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; }
+    .step::before { content: counter(s); display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 700; }
+    .step h3 { margin: .8rem 0 .3rem; }
+    .step p { margin: 0; color: var(--muted); }
+
+    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; align-items: stretch; }
+    .plan { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; display: flex; flex-direction: column; }
+    .plan.best { border: 2px solid var(--accent); position: relative; }
+    .plan.best::before { content: "El más elegido"; position: absolute; top: -.8rem; left: 1.4rem; background: var(--accent); color: #fff; font-size: .78rem; font-weight: 700; padding: .2rem .7rem; border-radius: 999px; }
+    .plan h3 { margin: 0; }
+    .price { font-size: 2.2rem; font-weight: 800; margin: .6rem 0 0; letter-spacing: -1px; }
+    .price small { font-size: .95rem; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+    .monthly { color: var(--muted); font-size: .9rem; margin: 0 0 1rem; }
+    .plan ul { list-style: none; padding: 0; margin: 0 0 1.4rem; flex: 1; }
+    .plan li { padding: .35rem 0 .35rem 1.6rem; position: relative; }
+    .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+    .plan .btn { text-align: center; }
+
+    .faq details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.2rem; margin-bottom: .6rem; }
+    .faq summary { font-weight: 600; cursor: pointer; }
+    .faq p { margin: .6rem 0 0; color: var(--muted); }
+
+    .final { text-align: center; background: var(--accent-soft); }
+    .final .sub { margin-left: auto; margin-right: auto; }
+    footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-size: .85rem; }
+
+    @media (max-width: 860px) {
+      .hero .wrap { grid-template-columns: 1fr; }
+      .features, .steps, .plans { grid-template-columns: 1fr; }
+      .vs { grid-template-columns: 1fr; }
+      nav .links a:not(.btn) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="logo" href="#">Menú QR <span>Salamanca</span></a>
+      <div class="links">
+        <a href="#funciones">Funciones</a>
+        <a href="#precios">Precios</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="btn primary js-whatsapp" href="#">Pedir demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <span class="kicker">Para bares, cafeterías y restaurantes</span>
+        <h1>Tu carta en el móvil de cada cliente. <em>En su idioma.</em></h1>
+        <p class="lead">Una carta digital con código QR, en español, inglés y francés, con los 14 alérgenos y un asistente que recomienda platos. Cambias los precios tú mismo, sin reimprimir nada.</p>
+        <div class="cta-row">
+          <a class="btn whats js-whatsapp" href="#">💬 Escríbeme por WhatsApp</a>
+          <a class="btn ghost" href="index.html" target="_blank">Ver la demo ↗</a>
+        </div>
+        <p class="proof">Lista en 48 horas · Sin aplicaciones · Funciona en cualquier móvil</p>
+      </div>
+      <div>
+        <div class="phone"><iframe src="index.html" title="Demo de la carta digital" loading="lazy"></iframe></div>
+        <p class="phone-note">👆 Es la demo real. Pruébala: cambia de idioma o pulsa «¿Qué pido?»</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="problem">
+    <div class="wrap">
+      <h2>La carta de papel te cuesta dinero</h2>
+      <p class="sub">Salamanca recibe turistas y estudiantes de todo el mundo. Muchos no entienden la carta y piden menos.</p>
+      <div class="vs">
+        <div class="before">
+          <h3>😩 Carta de papel</h3>
+          <ul>
+            <li>Reimprimir cada vez que cambia un precio</li>
+            <li>Solo en español</li>
+            <li>El camarero explica cada plato y cada alérgeno</li>
+            <li>Se mancha, se rompe, se pierde</li>
+          </ul>
+        </div>
+        <div class="after">
+          <h3>😍 Carta digital</h3>
+          <ul>
+            <li>Cambias un precio en 10 segundos desde el móvil</li>
+            <li>Español, inglés y francés automáticamente</li>
+            <li>Alérgenos claros y un asistente que responde</li>
+            <li>Siempre limpia y actualizada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="funciones">
+    <div class="wrap">
+      <h2>Todo lo que necesita tu negocio</h2>
+      <p class="sub">Sin aplicaciones que descargar. El cliente escanea el QR de la mesa y listo.</p>
+      <div class="features">
+        <div class="feature"><div class="ico">🌍</div><h3>3 idiomas</h3><p>La carta se abre en el idioma del móvil del cliente: español, inglés o francés.</p></div>
+        <div class="feature"><div class="ico">✨</div><h3>Asistente «¿Qué pido?»</h3><p>El cliente escribe «sin gluten» o «algo típico» y el asistente le recomienda platos.</p></div>
+        <div class="feature"><div class="ico">⚠️</div><h3>14 alérgenos</h3><p>Los 14 alérgenos que pide la normativa europea, bien visibles en cada plato.</p></div>
+        <div class="feature"><div class="ico">📷</div><h3>Fotos de tus platos</h3><p>Una buena foto hace pedir más. Subes las fotos de tu cocina y aparecen en la carta.</p></div>
+        <div class="feature"><div class="ico">✏️</div><h3>Lo cambias tú</h3><p>Precios, platos agotados, el menú del día: lo editas tú mismo en una hoja sencilla.</p></div>
+        <div class="feature"><div class="ico">💬</div><h3>Reservas por WhatsApp</h3><p>Un botón para que el cliente te escriba o reserve mesa directamente.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Así de fácil</h2>
+      <p class="sub">Tú me envías tu carta. Yo me encargo del resto.</p>
+      <div class="steps">
+        <div class="step"><h3>Me envías tu carta</h3><p>Una foto de tu carta actual por WhatsApp. Con eso me basta.</p></div>
+        <div class="step"><h3>La preparo en 48 h</h3><p>Traduzco los platos, marco los alérgenos y pongo tus colores.</p></div>
+        <div class="step"><h3>Pones el QR en las mesas</h3><p>Te entrego el código QR listo para imprimir. Tus clientes ya pueden usarla.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <div class="wrap">
+      <h2>Precios claros</h2>
+      <p class="sub">Sin permanencia. Si no te convence, lo dejas cuando quieras.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Básico</h3>
+          <p class="price">99 € <small>pago único</small></p>
+          <p class="monthly">Alojamiento incluido</p>
+          <ul>
+            <li>Carta digital en 3 idiomas</li>
+            <li>Los 14 alérgenos</li>
+            <li>Código QR para imprimir</li>
+            <li>2 cambios al mes (yo los hago)</li>
+          </ul>
+          <a class="btn ghost js-whatsapp" data-plan="Básico" href="#">Lo quiero</a>
+        </div>
+        <div class="plan best">
+          <h3>Completo</h3>
+          <p class="price">149 € <small>+ 9 €/mes</small></p>
+          <p class="monthly">Todo lo del Básico, y además:</p>
+          <ul>
+            <li>Asistente «¿Qué pido?»</li>
+            <li>Fotos de tus platos</li>
+            <li>Editas la carta tú mismo</li>
+            <li>Botón de WhatsApp para reservas</li>
+          </ul>
+          <a class="btn primary js-whatsapp" data-plan="Completo" href="#">Lo quiero</a>
+        </div>
+        <div class="plan">
+          <h3>Premium</h3>
+          <p class="price">249 € <small>+ 15 €/mes</small></p>
+          <p class="monthly">Todo lo del Completo, y además:</p>
+          <ul>
+            <li>Sesión de fotos de tus platos</li>
+            <li>Carteles QR diseñados para las mesas</li>
+            <li>Cambios ilimitados (yo los hago)</li>
+            <li>Ayuda prioritaria</li>
+          </ul>
+          <a class="btn ghost js-whatsapp" data-plan="Premium" href="#">Lo quiero</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas" class="faq">
+    <div class="wrap">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Mis clientes tienen que descargar una aplicación?</summary><p>No. Escanean el QR con la cámara del móvil y la carta se abre en el navegador.</p></details>
+      <details><summary>¿Y si un cliente no tiene móvil o prefiere papel?</summary><p>La carta digital se puede imprimir tal cual. Puedes tener las dos.</p></details>
+      <details><summary>¿Cómo cambio un precio o quito un plato agotado?</summary><p>En el plan Completo y Premium lo cambias tú en una hoja sencilla, desde el móvil. En el Básico me escribes por WhatsApp y lo cambio yo.</p></details>
+      <details><summary>¿El asistente puede equivocarse con los alérgenos?</summary><p>El asistente usa la información de alérgenos que tú indicas en la carta, y siempre recuerda al cliente que confirme con el personal.</p></details>
+      <details><summary>¿Puedo usar mi propio dominio (www.mibar.com)?</summary><p>Sí. Si ya tienes dominio, la carta se puede poner en él.</p></details>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>¿Lo probamos con tu carta?</h2>
+      <p class="sub">Envíame una foto de tu carta y te preparo una demo gratis con tus platos. Sin compromiso.</p>
+      <a class="btn whats js-whatsapp" href="#">💬 Quiero mi demo gratis</a>
+    </div>
+  </section>
+
+  <footer>
+    Menú QR Salamanca · Servicios digitales para pequeños negocios ·
+    <a href="https://github.com/elalamiz605-tech/menu-qr-cafe">Código en GitHub</a>
+  </footer>
+
+  <script>
+    // ✏️ Cambia aquí tu número de WhatsApp (con prefijo 34, sin + ni espacios)
+    const MI_WHATSAPP = "34600000000";
+    document.querySelectorAll(".js-whatsapp").forEach((a) => {
+      const plan = a.dataset.plan;
+      const msg = plan
+        ? `Hola, me interesa la carta digital QR, plan ${plan}.`
+        : "Hola, me interesa la carta digital QR para mi negocio.";
+      a.href = `https://wa.me/${MI_WHATSAPP}?text=${encodeURIComponent(msg)}`;
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
+  </script>
+</body>
+</html>

@@ -13,53 +13,360 @@
       "fr": "Lun–Sam 8h00–23h00 · Dim 9h00–15h00"
     },
     "whatsapp": "34600000000",
-    "currency": "€"
+    "currency": "€",
+    "sheetCsvUrl": ""
   },
   "categories": [
     {
       "id": "cafes",
       "icon": "☕",
-      "name": { "es": "Cafés", "en": "Coffee", "fr": "Cafés" },
+      "name": {
+        "es": "Cafés",
+        "en": "Coffee",
+        "fr": "Cafés"
+      },
       "items": [
-        { "name": { "es": "Café solo", "en": "Espresso", "fr": "Expresso" }, "price": 1.30, "allergens": [] },
-        { "name": { "es": "Café con leche", "en": "Coffee with milk", "fr": "Café au lait" }, "price": 1.60, "allergens": ["milk"], "tags": ["popular"] },
-        { "name": { "es": "Cortado", "en": "Cortado", "fr": "Noisette" }, "price": 1.40, "allergens": ["milk"] },
-        { "name": { "es": "Capuchino", "en": "Cappuccino", "fr": "Cappuccino" }, "price": 2.20, "allergens": ["milk"] },
-        { "name": { "es": "Café con bebida vegetal", "en": "Coffee with plant milk", "fr": "Café au lait végétal" }, "price": 1.90, "allergens": ["soy"], "tags": ["vegan"] }
+        {
+          "name": {
+            "es": "Café solo",
+            "en": "Espresso",
+            "fr": "Expresso"
+          },
+          "price": 1.3,
+          "allergens": [],
+          "emoji": "☕",
+          "photo": "",
+          "tags": []
+        },
+        {
+          "name": {
+            "es": "Café con leche",
+            "en": "Coffee with milk",
+            "fr": "Café au lait"
+          },
+          "price": 1.6,
+          "allergens": [
+            "milk"
+          ],
+          "tags": [
+            "popular"
+          ],
+          "emoji": "☕",
+          "photo": ""
+        },
+        {
+          "name": {
+            "es": "Cortado",
+            "en": "Cortado",
+            "fr": "Noisette"
+          },
+          "price": 1.4,
+          "allergens": [
+            "milk"
+          ],
+          "emoji": "☕",
+          "photo": "",
+          "tags": []
+        },
+        {
+          "name": {
+            "es": "Capuchino",
+            "en": "Cappuccino",
+            "fr": "Cappuccino"
+          },
+          "price": 2.2,
+          "allergens": [
+            "milk"
+          ],
+          "emoji": "☕",
+          "photo": "",
+          "tags": [
+            "sweet"
+          ]
+        },
+        {
+          "name": {
+            "es": "Café con bebida vegetal",
+            "en": "Coffee with plant milk",
+            "fr": "Café au lait végétal"
+          },
+          "price": 1.9,
+          "allergens": [
+            "soy"
+          ],
+          "tags": [
+            "vegan"
+          ],
+          "emoji": "🌱",
+          "photo": ""
+        }
       ]
     },
     {
       "id": "desayunos",
       "icon": "🥐",
-      "name": { "es": "Desayunos", "en": "Breakfast", "fr": "Petit-déjeuner" },
+      "name": {
+        "es": "Desayunos",
+        "en": "Breakfast",
+        "fr": "Petit-déjeuner"
+      },
       "items": [
-        { "name": { "es": "Tostada con tomate y aceite", "en": "Toast with tomato and olive oil", "fr": "Tartine tomate et huile d'olive" }, "price": 2.50, "allergens": ["gluten"], "tags": ["vegan", "popular"] },
-        { "name": { "es": "Tostada con jamón ibérico", "en": "Toast with Iberian ham", "fr": "Tartine au jambon ibérique" }, "price": 4.50, "allergens": ["gluten"] },
-        { "name": { "es": "Croissant a la plancha", "en": "Grilled croissant", "fr": "Croissant grillé" }, "price": 2.00, "allergens": ["gluten", "milk", "egg"] },
-        { "name": { "es": "Churros con chocolate", "en": "Churros with chocolate", "fr": "Churros au chocolat" }, "price": 4.00, "allergens": ["gluten", "milk"] }
+        {
+          "name": {
+            "es": "Tostada con tomate y aceite",
+            "en": "Toast with tomato and olive oil",
+            "fr": "Tartine tomate et huile d'olive"
+          },
+          "price": 2.5,
+          "allergens": [
+            "gluten"
+          ],
+          "tags": [
+            "vegan",
+            "popular"
+          ],
+          "emoji": "🍅",
+          "photo": ""
+        },
+        {
+          "name": {
+            "es": "Tostada con jamón ibérico",
+            "en": "Toast with Iberian ham",
+            "fr": "Tartine au jambon ibérique"
+          },
+          "price": 4.5,
+          "allergens": [
+            "gluten"
+          ],
+          "emoji": "🥓",
+          "photo": "",
+          "tags": [
+            "hearty",
+            "local"
+          ]
+        },
+        {
+          "name": {
+            "es": "Croissant a la plancha",
+            "en": "Grilled croissant",
+            "fr": "Croissant grillé"
+          },
+          "price": 2.0,
+          "allergens": [
+            "gluten",
+            "milk",
+            "egg"
+          ],
+          "emoji": "🥐",
+          "photo": "",
+          "tags": [
+            "sweet"
+          ]
+        },
+        {
+          "name": {
+            "es": "Churros con chocolate",
+            "en": "Churros with chocolate",
+            "fr": "Churros au chocolat"
+          },
+          "price": 4.0,
+          "allergens": [
+            "gluten",
+            "milk"
+          ],
+          "emoji": "🍫",
+          "photo": "",
+          "tags": [
+            "popular",
+            "sweet"
+          ],
+          "description": {
+            "es": "Chocolate espeso para mojar",
+            "en": "Thick chocolate for dipping",
+            "fr": "Chocolat épais pour tremper"
+          }
+        }
       ]
     },
     {
       "id": "tapas",
       "icon": "🍢",
-      "name": { "es": "Tapas", "en": "Tapas", "fr": "Tapas" },
+      "name": {
+        "es": "Tapas",
+        "en": "Tapas",
+        "fr": "Tapas"
+      },
       "items": [
-        { "name": { "es": "Tortilla de patatas", "en": "Spanish omelette", "fr": "Tortilla de pommes de terre" }, "price": 3.00, "allergens": ["egg"], "tags": ["popular"] },
-        { "name": { "es": "Patatas bravas", "en": "Spicy potatoes", "fr": "Pommes de terre épicées" }, "price": 4.50, "allergens": ["egg"], "tags": ["spicy"] },
-        { "name": { "es": "Hornazo de Salamanca", "en": "Hornazo (Salamanca meat pie)", "fr": "Hornazo (tourte de Salamanque)" }, "price": 3.50, "allergens": ["gluten", "egg"] },
-        { "name": { "es": "Croquetas caseras (6)", "en": "Homemade croquettes (6)", "fr": "Croquettes maison (6)" }, "price": 6.00, "allergens": ["gluten", "milk", "egg"] },
-        { "name": { "es": "Ensalada de la casa", "en": "House salad", "fr": "Salade maison" }, "price": 7.00, "allergens": [], "tags": ["vegan"] }
+        {
+          "name": {
+            "es": "Tortilla de patatas",
+            "en": "Spanish omelette",
+            "fr": "Tortilla de pommes de terre"
+          },
+          "price": 3.0,
+          "allergens": [
+            "egg"
+          ],
+          "tags": [
+            "popular"
+          ],
+          "emoji": "🥚",
+          "photo": "",
+          "description": {
+            "es": "Jugosa, hecha cada mañana",
+            "en": "Juicy, made every morning",
+            "fr": "Moelleuse, faite chaque matin"
+          }
+        },
+        {
+          "name": {
+            "es": "Patatas bravas",
+            "en": "Spicy potatoes",
+            "fr": "Pommes de terre épicées"
+          },
+          "price": 4.5,
+          "allergens": [
+            "egg"
+          ],
+          "tags": [
+            "spicy"
+          ],
+          "emoji": "🥔",
+          "photo": "",
+          "description": {
+            "es": "Con salsa brava picante y alioli",
+            "en": "With spicy sauce and aioli",
+            "fr": "Sauce piquante et aïoli"
+          }
+        },
+        {
+          "name": {
+            "es": "Hornazo de Salamanca",
+            "en": "Hornazo (Salamanca meat pie)",
+            "fr": "Hornazo (tourte de Salamanque)"
+          },
+          "price": 3.5,
+          "allergens": [
+            "gluten",
+            "egg"
+          ],
+          "emoji": "🥧",
+          "photo": "",
+          "tags": [
+            "popular",
+            "hearty",
+            "local"
+          ],
+          "description": {
+            "es": "Empanada típica con chorizo y lomo",
+            "en": "Local pie with chorizo and pork loin",
+            "fr": "Tourte typique au chorizo et porc"
+          }
+        },
+        {
+          "name": {
+            "es": "Croquetas caseras (6)",
+            "en": "Homemade croquettes (6)",
+            "fr": "Croquettes maison (6)"
+          },
+          "price": 6.0,
+          "allergens": [
+            "gluten",
+            "milk",
+            "egg"
+          ],
+          "emoji": "🧆",
+          "photo": "",
+          "tags": [
+            "hearty"
+          ],
+          "description": {
+            "es": "De jamón, receta de la abuela",
+            "en": "Ham croquettes, grandma's recipe",
+            "fr": "Au jambon, recette de grand-mère"
+          }
+        },
+        {
+          "name": {
+            "es": "Ensalada de la casa",
+            "en": "House salad",
+            "fr": "Salade maison"
+          },
+          "price": 7.0,
+          "allergens": [],
+          "tags": [
+            "vegan",
+            "light"
+          ],
+          "emoji": "🥗",
+          "photo": ""
+        }
       ]
     },
     {
       "id": "bebidas",
       "icon": "🥤",
-      "name": { "es": "Bebidas", "en": "Drinks", "fr": "Boissons" },
+      "name": {
+        "es": "Bebidas",
+        "en": "Drinks",
+        "fr": "Boissons"
+      },
       "items": [
-        { "name": { "es": "Zumo de naranja natural", "en": "Fresh orange juice", "fr": "Jus d'orange pressé" }, "price": 3.00, "allergens": [], "tags": ["vegan"] },
-        { "name": { "es": "Agua mineral", "en": "Mineral water", "fr": "Eau minérale" }, "price": 1.50, "allergens": [] },
-        { "name": { "es": "Caña de cerveza", "en": "Small draught beer", "fr": "Petite bière pression" }, "price": 2.00, "allergens": ["gluten"] },
-        { "name": { "es": "Copa de vino Ribera", "en": "Glass of Ribera wine", "fr": "Verre de vin Ribera" }, "price": 2.80, "allergens": ["sulphites"] }
+        {
+          "name": {
+            "es": "Zumo de naranja natural",
+            "en": "Fresh orange juice",
+            "fr": "Jus d'orange pressé"
+          },
+          "price": 3.0,
+          "allergens": [],
+          "tags": [
+            "vegan",
+            "light"
+          ],
+          "emoji": "🍊",
+          "photo": ""
+        },
+        {
+          "name": {
+            "es": "Agua mineral",
+            "en": "Mineral water",
+            "fr": "Eau minérale"
+          },
+          "price": 1.5,
+          "allergens": [],
+          "emoji": "💧",
+          "photo": "",
+          "tags": []
+        },
+        {
+          "name": {
+            "es": "Caña de cerveza",
+            "en": "Small draught beer",
+            "fr": "Petite bière pression"
+          },
+          "price": 2.0,
+          "allergens": [
+            "gluten"
+          ],
+          "emoji": "🍺",
+          "photo": "",
+          "tags": []
+        },
+        {
+          "name": {
+            "es": "Copa de vino Ribera",
+            "en": "Glass of Ribera wine",
+            "fr": "Verre de vin Ribera"
+          },
+          "price": 2.8,
+          "allergens": [
+            "sulphites"
+          ],
+          "emoji": "🍷",
+          "photo": "",
+          "tags": []
+        }
       ]
     }
   ]
