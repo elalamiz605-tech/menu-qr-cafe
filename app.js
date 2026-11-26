@@ -56,7 +56,9 @@ const normalize = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""
 const itemId = (it) => "p-" + normalize(it.name.es).replace(/[^a-z0-9]+/g, "-");
 
 function thumb(it) {
-  if (it.photo) return `<img class="thumb" src="${esc(it.photo)}" alt="${esc(t(it.name))}" loading="lazy">`;
+  // Si la foto no carga, se muestra el emoji en su lugar
+  if (it.photo) return `<img class="thumb" src="${esc(it.photo)}" alt="${esc(t(it.name))}" loading="lazy"
+    onerror="this.outerHTML='<div class=&quot;thumb thumb-emoji&quot; aria-hidden=&quot;true&quot;>${esc(it.emoji || "🍽️")}</div>'">`;
   return `<div class="thumb thumb-emoji" aria-hidden="true">${esc(it.emoji || "🍽️")}</div>`;
 }
 

@@ -35,7 +35,7 @@
           "price": 1.3,
           "allergens": [],
           "emoji": "☕",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1568713852733-56590b197f4f?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": []
         },
         {
@@ -52,7 +52,7 @@
             "popular"
           ],
           "emoji": "☕",
-          "photo": ""
+          "photo": "https://images.unsplash.com/photo-1563090308-5a7889e40542?w=320&h=320&fit=crop&auto=format&q=70"
         },
         {
           "name": {
@@ -65,7 +65,7 @@
             "milk"
           ],
           "emoji": "☕",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1475241404975-c3ae90fdd9e6?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": []
         },
         {
@@ -79,7 +79,7 @@
             "milk"
           ],
           "emoji": "☕",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": [
             "sweet"
           ]
@@ -98,7 +98,7 @@
             "vegan"
           ],
           "emoji": "🌱",
-          "photo": ""
+          "photo": "https://images.unsplash.com/photo-1741461500711-59b03bceb2ce?w=320&h=320&fit=crop&auto=format&q=70"
         }
       ]
     },
@@ -126,7 +126,7 @@
             "popular"
           ],
           "emoji": "🍅",
-          "photo": ""
+          "photo": "https://images.unsplash.com/photo-1506280754576-f6fa8a873550?w=320&h=320&fit=crop&auto=format&q=70"
         },
         {
           "name": {
@@ -139,7 +139,7 @@
             "gluten"
           ],
           "emoji": "🥓",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1732565432358-a8c95bc24ea3?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": [
             "hearty",
             "local"
@@ -158,7 +158,7 @@
             "egg"
           ],
           "emoji": "🥐",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1679449223735-444c4f71f0dd?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": [
             "sweet"
           ]
@@ -175,7 +175,7 @@
             "milk"
           ],
           "emoji": "🍫",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1624371414361-e670edf4898d?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": [
             "popular",
             "sweet"
@@ -211,7 +211,7 @@
             "popular"
           ],
           "emoji": "🥚",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1595519516956-9d085ab1cd50?w=320&h=320&fit=crop&auto=format&q=70",
           "description": {
             "es": "Jugosa, hecha cada mañana",
             "en": "Juicy, made every morning",
@@ -232,7 +232,7 @@
             "spicy"
           ],
           "emoji": "🥔",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1565599837634-134bc3aadce8?w=320&h=320&fit=crop&auto=format&q=70",
           "description": {
             "es": "Con salsa brava picante y alioli",
             "en": "With spicy sauce and aioli",
@@ -276,7 +276,7 @@
             "egg"
           ],
           "emoji": "🧆",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1713517915303-ae3b3429f939?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": [
             "hearty"
           ],
@@ -299,7 +299,7 @@
             "light"
           ],
           "emoji": "🥗",
-          "photo": ""
+          "photo": "https://images.unsplash.com/photo-1537215781824-73d7761029e1?w=320&h=320&fit=crop&auto=format&q=70"
         }
       ]
     },
@@ -325,7 +325,7 @@
             "light"
           ],
           "emoji": "🍊",
-          "photo": ""
+          "photo": "https://images.unsplash.com/photo-1682423257957-9c96c6cd9c59?w=320&h=320&fit=crop&auto=format&q=70"
         },
         {
           "name": {
@@ -336,7 +336,7 @@
           "price": 1.5,
           "allergens": [],
           "emoji": "💧",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1516888892881-aad840c56db2?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": []
         },
         {
@@ -350,7 +350,7 @@
             "gluten"
           ],
           "emoji": "🍺",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1574521091464-a55e7763c1e5?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": []
         },
         {
@@ -364,7 +364,7 @@
             "sulphites"
           ],
           "emoji": "🍷",
-          "photo": "",
+          "photo": "https://images.unsplash.com/photo-1598306442837-613a3def54ff?w=320&h=320&fit=crop&auto=format&q=70",
           "tags": []
         }
       ]
