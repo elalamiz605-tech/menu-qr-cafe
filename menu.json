@@ -1,0 +1,66 @@
+{
+  "cafe": {
+    "name": "Café del Puente",
+    "city": "Salamanca",
+    "tagline": {
+      "es": "Café, desayunos y tapas junto al río",
+      "en": "Coffee, breakfast and tapas by the river",
+      "fr": "Café, petits-déjeuners et tapas au bord de la rivière"
+    },
+    "hours": {
+      "es": "Lun–Sáb 8:00–23:00 · Dom 9:00–15:00",
+      "en": "Mon–Sat 8:00–23:00 · Sun 9:00–15:00",
+      "fr": "Lun–Sam 8h00–23h00 · Dim 9h00–15h00"
+    },
+    "whatsapp": "34600000000",
+    "currency": "€"
+  },
+  "categories": [
+    {
+      "id": "cafes",
+      "icon": "☕",
+      "name": { "es": "Cafés", "en": "Coffee", "fr": "Cafés" },
+      "items": [
+        { "name": { "es": "Café solo", "en": "Espresso", "fr": "Expresso" }, "price": 1.30, "allergens": [] },
+        { "name": { "es": "Café con leche", "en": "Coffee with milk", "fr": "Café au lait" }, "price": 1.60, "allergens": ["milk"], "tags": ["popular"] },
+        { "name": { "es": "Cortado", "en": "Cortado", "fr": "Noisette" }, "price": 1.40, "allergens": ["milk"] },
+        { "name": { "es": "Capuchino", "en": "Cappuccino", "fr": "Cappuccino" }, "price": 2.20, "allergens": ["milk"] },
+        { "name": { "es": "Café con bebida vegetal", "en": "Coffee with plant milk", "fr": "Café au lait végétal" }, "price": 1.90, "allergens": ["soy"], "tags": ["vegan"] }
+      ]
+    },
+    {
+      "id": "desayunos",
+      "icon": "🥐",
+      "name": { "es": "Desayunos", "en": "Breakfast", "fr": "Petit-déjeuner" },
+      "items": [
+        { "name": { "es": "Tostada con tomate y aceite", "en": "Toast with tomato and olive oil", "fr": "Tartine tomate et huile d'olive" }, "price": 2.50, "allergens": ["gluten"], "tags": ["vegan", "popular"] },
+        { "name": { "es": "Tostada con jamón ibérico", "en": "Toast with Iberian ham", "fr": "Tartine au jambon ibérique" }, "price": 4.50, "allergens": ["gluten"] },
+        { "name": { "es": "Croissant a la plancha", "en": "Grilled croissant", "fr": "Croissant grillé" }, "price": 2.00, "allergens": ["gluten", "milk", "egg"] },
+        { "name": { "es": "Churros con chocolate", "en": "Churros with chocolate", "fr": "Churros au chocolat" }, "price": 4.00, "allergens": ["gluten", "milk"] }
+      ]
+    },
+    {
+      "id": "tapas",
+      "icon": "🍢",
+      "name": { "es": "Tapas", "en": "Tapas", "fr": "Tapas" },
+      "items": [
+        { "name": { "es": "Tortilla de patatas", "en": "Spanish omelette", "fr": "Tortilla de pommes de terre" }, "price": 3.00, "allergens": ["egg"], "tags": ["popular"] },
+        { "name": { "es": "Patatas bravas", "en": "Spicy potatoes", "fr": "Pommes de terre épicées" }, "price": 4.50, "allergens": ["egg"], "tags": ["spicy"] },
+        { "name": { "es": "Hornazo de Salamanca", "en": "Hornazo (Salamanca meat pie)", "fr": "Hornazo (tourte de Salamanque)" }, "price": 3.50, "allergens": ["gluten", "egg"] },
+        { "name": { "es": "Croquetas caseras (6)", "en": "Homemade croquettes (6)", "fr": "Croquettes maison (6)" }, "price": 6.00, "allergens": ["gluten", "milk", "egg"] },
+        { "name": { "es": "Ensalada de la casa", "en": "House salad", "fr": "Salade maison" }, "price": 7.00, "allergens": [], "tags": ["vegan"] }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "icon": "🥤",
+      "name": { "es": "Bebidas", "en": "Drinks", "fr": "Boissons" },
+      "items": [
+        { "name": { "es": "Zumo de naranja natural", "en": "Fresh orange juice", "fr": "Jus d'orange pressé" }, "price": 3.00, "allergens": [], "tags": ["vegan"] },
+        { "name": { "es": "Agua mineral", "en": "Mineral water", "fr": "Eau minérale" }, "price": 1.50, "allergens": [] },
+        { "name": { "es": "Caña de cerveza", "en": "Small draught beer", "fr": "Petite bière pression" }, "price": 2.00, "allergens": ["gluten"] },
+        { "name": { "es": "Copa de vino Ribera", "en": "Glass of Ribera wine", "fr": "Verre de vin Ribera" }, "price": 2.80, "allergens": ["sulphites"] }
+      ]
+    }
+  ]
+}

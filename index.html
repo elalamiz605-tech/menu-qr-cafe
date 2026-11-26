@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menú digital con código QR para cafeterías y bares. Multilingüe: español, inglés y francés.">
+  <meta name="theme-color" content="#3b2a20">
+  <title>Menú · Café del Puente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="lang" role="group" aria-label="Idioma / Language / Langue">
+      <button data-lang="es" aria-pressed="true">ES</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+      <button data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+    <h1 id="cafe-name">Café del Puente</h1>
+    <p id="cafe-tagline" class="tagline"></p>
+    <p id="cafe-hours" class="hours"></p>
+  </header>
+
+  <nav class="tabs" id="tabs" aria-label="Categorías"></nav>
+
+  <div class="tools">
+    <input type="search" id="search" autocomplete="off">
+    <label class="toggle">
+      <input type="checkbox" id="vegan-only">
+      <span id="vegan-label"></span>
+    </label>
+  </div>
+
+  <main id="menu" aria-live="polite"></main>
+
+  <footer class="footer">
+    <p id="allergen-note"></p>
+    <a id="whatsapp" class="whatsapp" target="_blank" rel="noopener"></a>
+    <p class="credit">Demo · <a href="https://github.com/elalamiz605-tech/menu-qr-cafe">GitHub</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
