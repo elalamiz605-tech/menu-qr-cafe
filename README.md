@@ -58,7 +58,7 @@ python3 -m http.server 8000
 
 ## Autor · Auteur
 
-Hecho en Salamanca por **elalamiz605-tech** — servicios digitales para pequeños comercios.
+Hecho por **elalamiz605-tech** — servicios digitales para pequeños comercios.
 ¿Quieres este menú para tu negocio? Contáctame.
 
 > *Café del Puente* es un negocio ficticio para la demo.
